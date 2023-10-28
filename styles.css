@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  /* font-family: */
+  font-family: "Roboto", "Open Sans", sans-serif, sans-serif, "Sometype Mono",
+    monospace;
+}
+/*需link/import google font*/
+
+/* rwd img css reset */
+/* 防止產生X軸 */
+/*建議外容器尺寸 置中*/
+/* 瀏覽器最是996px＆less時 desk container*/
+@media screen and (max-width: 996px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+/* phone瀏覽器是768px時和以下less時 */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 372px;
+    margin: 0 auto;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+img {
+  max-width: 100%;
+  /* (如果圖片不夠大張 無法撐滿容器就改用width:100%) */
+  /* height: auto; */
+  /* (height: 100vh;如果佔滿整個視窗 可使用100vh) */
+  vertical-align: middle;
+  /* 防止照片下方有3px空白 */
+  object-fit: cover;
+  /* 做法：將img改成區塊元素 */
+  img {
+    display: block;
+  }
+  /*圖片可依造比例縮放*/
+}
+
+sub {
+  vertical-align: sub;
+}
+使用小字體在下方 a {
+  display: block;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: red;
+}
+ul,
+li {
+  list-style: none;
+}
+/* dropdown menu */
+.dropdown-toggle::after {
+  display: none;
+}
+/* table product detail */
+.productImg img {
+  height: 200px;
+  width: 300px;
+}
+/*Display BS5 grid + card + img card */
+.card-img-top {
+  height: 150px;
+}
+.cartBtn {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+}
+/* Carousel */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* product.html */
+.swiper-slide .productImgSwiper img {
+  max-width: 300px;
+  height: 190px;
+}
+@media (max-width: 992px) {
+  .swiper-slide .productImgSwiper img {
+    max-width: 100%;
+  }
+}
+.prodcutPage {
+  margin-top: 20px;
+}
